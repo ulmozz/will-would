@@ -88,6 +88,7 @@ ol.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .body { min-width: 0; display: grid; gap: 6px; }
 .sent { margin: 0; line-height: 2.1; }
 .hint { color: var(--muted); font-style: italic; }
+.ch { font: 500 .72rem var(--f-mono); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-right: 4px; white-space: nowrap; vertical-align: 1px; }
 .item input { font: 700 1rem var(--f-body); color: var(--ink); background: var(--marker); border: 0; border-bottom: 2px solid var(--muted); border-radius: 4px 4px 0 0; padding: 2px 6px; min-width: 10ch; max-width: 100%; }
 .item[data-state="ok"] input { background: var(--ok-soft); border-bottom-color: var(--ok); }
 .item[data-state="bad"] input { background: var(--bad-soft); border-bottom-color: var(--bad); }
@@ -131,7 +132,8 @@ ol.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
   <header>
     <div class="eyebrow">Grammar · modal verbs · upper-intermediate</div>
     <h1><span class="w">will</span> / <span class="w">won't</span> / <span class="w">would</span> / <span class="w">wouldn't</span></h1>
-    <p class="lead">Najpierw krótkie przypomnienie dziewięciu zastosowań, pod nim 5 zestawów po 20 zdań. W luce zbuduj cały fragment zdania ze słów w nawiasie, w podanej kolejności. Czasem trzeba dodać przedimek, przyimek, formę <i>-ing</i> albo zmienić czas. Skróty i pełne formy liczą się tak samo. W każdym zestawie jest jedna pułapka, w której <i>would</i> nie pasuje.</p>
+    <p class="lead">Najpierw krótkie przypomnienie dziewięciu zastosowań, pod nim 5 zestawów po 20 zdań. W luce zbuduj cały fragment zdania ze słów w nawiasie, w podanej kolejności. Czasem trzeba dodać przedimek, przyimek, formę <i>-ing</i> albo zmienić czas. Skróty i pełne formy liczą się tak samo. W każdym zestawie jest pułapka, w której <i>would</i> nie pasuje.</p>
+    <p class="lead">Zestawy <b>Deadly Harvest</b> opierają się na rozdziałach 2–16 książki z zajęć. Zdania są napisane od nowa (to nie cytaty), ale dotyczą tych samych postaci i scen i ćwiczą te same użycia <i>will/would</i>, które występują w tekście. Przy każdym zdaniu podany jest numer rozdziału.</p>
   </header>
 
   <section aria-labelledby="th">
@@ -139,9 +141,10 @@ ol.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
     <div class="cards">
       <article class="card" id="t-fut">
         <h3>1. Will — przyszłość „klasycznie”</h3>
-        <span class="form">will / 'll + bezokolicznik · will have + III forma</span>
-        <p>Przewidywanie, decyzja podjęta w chwili mówienia, obietnica, propozycja pomocy. <i>Will have done</i> to coś, co będzie już zakończone w przyszłości.</p>
-        <ul class="ex"><li>The phone's ringing. — I<b>'ll get</b> it!</li><li>I promise I <b>won't tell</b> anyone.</li><li>By the time we arrive, the film <b>will have started</b>.</li></ul>
+        <span class="form">will + bezokolicznik · will be + -ing · will have + III forma</span>
+        <p>Przewidywanie, decyzja podjęta w chwili mówienia, obietnica, propozycja, groźba. <i>Will be doing</i> to coś, co po prostu nastąpi zgodnie z planem. <i>Will have done</i> to coś, co będzie już zakończone w przyszłości.</p>
+        <ul class="ex"><li>The phone's ringing. — I<b>'ll get</b> it!</li><li>Don't move or I<b>'ll shoot</b>!</li><li>From today she<b>'ll be taking over</b> the department.</li><li>By the time we arrive, the film <b>will have started</b>.</li></ul>
+        <p class="note">Krótka odpowiedź bez czasownika: <i>I'm sure you <b>will</b>.</i> (nie: <s>you'll</s>)</p>
       </article>
       <article class="card" id="t-hab">
         <h3>2. Will — nawyki i typowe zachowanie</h3>
@@ -170,21 +173,23 @@ ol.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
       </article>
       <article class="card" id="t-cond">
         <h3>6. Would — warunki i hipotezy</h3>
-        <span class="form">if + past simple, … would + bezokolicznik</span>
-        <p>Sytuacje nierealne lub wyobrażone, także rady z „if I were you”.</p>
-        <ul class="ex"><li>If I had more time, I<b>'d learn</b> Spanish.</li><li>I <b>wouldn't do</b> that if I were you.</li><li>I <b>wouldn't dream of</b> asking him.</li></ul>
+        <span class="form">would + bezokolicznik · would have + III forma (przeszłość)</span>
+        <p>Sytuacje nierealne lub wyobrażone, rady z „if I were you” i spekulacje („czy naprawdę by…?”). O przeszłości: <i>would have done</i>.</p>
+        <ul class="ex"><li>If I had more time, I<b>'d learn</b> Spanish.</li><li><b>Would</b> he really <b>kill</b> his own brother?</li><li>An injection <b>wouldn't have woken</b> him.</li><li>If she had known, she <b>would never have left</b>.</li></ul>
+        <p class="note">Nie myl: <i>she <b>would have</b> a motive</i> (= miałaby) z <i>she <b>would have had</b> a motive</i> (= miałaby wtedy).</p>
       </article>
       <article class="card" id="t-pol">
         <h3>7. Would — uprzejmość i preferencje</h3>
         <span class="form">would you…? · I'd like / love / rather / prefer</span>
         <p>Grzeczne prośby, propozycje i mówienie, czego chcemy.</p>
-        <ul class="ex"><li><b>Would you mind</b> closing the window?</li><li>I<b>'d be grateful</b> if you could call me back.</li><li>I<b>'d rather not</b> talk about it.</li></ul>
+        <ul class="ex"><li><b>Would you mind</b> closing the window?</li><li>I<b>'d be grateful</b> if you could call me back.</li><li>Send a car for me, <b>will you</b>?</li><li>If you<b>'ll excuse</b> us, we must go.</li></ul>
+        <p class="note">Pułapka: <i>we<b>'d better</b> go</i> to <b>had</b> better, nie <i>would</i>.</p>
       </article>
       <article class="card" id="t-rep">
-        <h3>8. Will → would w mowie zależnej</h3>
-        <span class="form">„I'll …” → he said he would …</span>
-        <p>Gdy relacjonujemy czyjeś słowa w przeszłości, <i>will</i> przechodzi w <i>would</i>, a <i>tomorrow</i> w <i>the following day</i>.</p>
-        <ul class="ex"><li>“I'll call you.” → He said he <b>would call</b> me.</li><li>She swore she <b>would never speak</b> to me again.</li></ul>
+        <h3>8. Will → would: mowa zależna i przyszłość w przeszłości</h3>
+        <span class="form">„I'll …” → he said he would … · she would go…</span>
+        <p>Gdy relacjonujemy czyjeś słowa w przeszłości, <i>will</i> przechodzi w <i>would</i>, a <i>tomorrow</i> w <i>the following day</i>. W opowiadaniu w czasie przeszłym <i>would</i> opisuje też plany i myśli bohatera o tym, co będzie.</p>
+        <ul class="ex"><li>“I'll call you.” → He said he <b>would call</b> me.</li><li>Jane planned her day: she <b>would go</b> to the factory herself.</li><li>She knew she <b>would have to</b> hurry.</li></ul>
       </article>
       <article class="card" id="t-ded">
         <h3>9. Will — przypuszczenie</h3>
@@ -217,222 +222,124 @@ const CATS = {
   ref:   ["won't / wouldn't: odmowa", 't-ref'],
   cond:  ['would: warunek, hipoteza', 't-cond'],
   pol:   ['would: uprzejmość, preferencje', 't-pol'],
-  rep:   ['will → would: mowa zależna', 't-rep'],
+  rep:   ['will → would: mowa zależna / przyszłość w przeszłości', 't-rep'],
+  trap:  ["pułapka: 'd better = had better", 't-pol'],
   ded:   ['will: przypuszczenie', 't-ded']
 };
 // s: "przed|podpowiedź|po", a: akceptowane odpowiedzi (pierwsza = wzorcowa), u: kategoria, e: wyjaśnienie
 const SETS = [
  [
-  {s:"My grandmother is 85, but she|not / hear of / anyone / help / her / with the shopping|.", a:["won't hear of anyone helping her with the shopping"], u:'ref',
-   e:"<b>won't hear of</b> = nie chce nawet słyszeć o… — uparta odmowa, stała cecha. Po <i>hear of</i> idzie osoba + forma <b>-ing</b>: <i>anyone helping</i>."},
-  {s:"My dad's a real creature of habit. Every evening he|pour / himself / glass of wine / and / fall asleep / in front of the news|.", a:["'ll pour himself a glass of wine and fall asleep in front of the news","'ll pour himself a glass of wine and will fall asleep in front of the news"], u:'hab',
-   e:"Stały wieczorny rytuał → <b>will</b>. Jedno <i>will</i> obsługuje oba czasowniki połączone <i>and</i>. Trzeba dodać przedimek: <b>a</b> glass of wine."},
-  {s:"When we were students, we|stay up / all night / argue / about politics|, and then sleep through our morning lectures.", a:["would stay up all night arguing about politics","used to stay up all night arguing about politics"], u:'past',
-   e:"Powtarzane zachowanie z przeszłości → <b>would</b>. Po <i>stay up all night</i> drugi czasownik w <b>-ing</b> (<i>arguing</i>), tak jak w <i>spend hours reminiscing</i>."},
-  {s:"As a child, I|be / terrified / dark|, so my parents always left the landing light on.", a:["used to be terrified of the dark","was terrified of the dark"], u:'past',
-   e:"<b>Pułapka.</b> <i>Be terrified</i> to stan, nie czynność. <i>Would</i> nie opisuje stanów w przeszłości, więc tylko <b>used to be</b> albo <b>was</b>. Dodajesz też <i>of the</i>."},
-  {s:"I've tried everything – WD-40, hot water, a hammer – but the bolt|still / not / budge / an inch|.", a:["still won't budge an inch"], u:'ref',
-   e:"Present perfect (<i>I've tried</i>) pokazuje, że problem trwa → <b>won't</b>. <b>Still</b> stoi przed <i>won't</i>. <i>Not budge an inch</i> = ani drgnie."},
-  {s:"She's in a terrible mood. If I were you, I|not / even / mention / the party / let alone / ask / her / to help|.", a:["wouldn't even mention the party, let alone ask her to help"], u:'cond',
-   e:"Rada z <i>If I were you</i> → <b>wouldn't</b>. Po <b>let alone</b> (a co dopiero) ten sam typ bezokolicznika co wcześniej, bez <i>to</i>: <i>let alone ask</i>."},
-  {s:"What|we / usually / do / on Christmas Eve / is / go / to my aunt's|, and then everyone ends up at our place.", a:["we'll usually do on Christmas Eve is go to my aunt's","we'll usually do on Christmas Eve is to go to my aunt's"], u:'hab',
-   e:"Konstrukcja <b>What X will do is…</b> najpierw zapowiada „to, co zwykle robimy”, a po <i>is</i> pokazuje samą czynność (bezokolicznik, z <i>to</i> albo bez). Przysłówek <i>usually</i> stoi między <i>will</i> a <i>do</i>."},
-  {s:"My flatmate drives me mad. He|borrow / my things / without / ask / and then / swear blind / he / not / touch / them|!", a:["will borrow my things without asking and then swear blind he hasn't touched them","will borrow my things without asking and then swear blind he didn't touch them","will borrow my things without asking and then swear blind he never touched them"], u:'annoy',
-   e:"Akcentowane <b>WILL</b> = irytujący nawyk. Po przyimku <i>without</i> zawsze <b>-ing</b> (<i>asking</i>). <i>Swear blind</i> = przysięgać w żywe oczy; to samo <i>will</i> obejmuje oba czasowniki."},
-  {s:"Don't bother ringing the office now – everyone|go home / ages ago|.", a:["will have gone home ages ago"], u:'ded',
-   e:"Przypuszczenie o przeszłości: <b>will have + III forma</b> (<i>gone</i>). Mówiący jest pewny, choć tego nie sprawdził."},
-  {s:"When I asked him about the money, he|swear / he / pay / me / back / by the end of the month|, but I'm still waiting.", a:["swore he would pay me back by the end of the month","swore that he would pay me back by the end of the month"], u:'rep',
-   e:"Jego słowa brzmiały <i>“I'll pay you back”</i>. W relacji z przeszłości <b>will → would</b>, a sam czasownik relacjonujący też jest w przeszłości: <b>swore</b>."},
-  {s:"My son|happily / spend / hours / build / Lego / but / he / not / tidy / it / away / afterwards|.", a:["will happily spend hours building Lego, but he won't tidy it away afterwards"], u:'hab',
-   e:"Dwa użycia w jednym zdaniu: <b>will happily spend</b> to typowe zachowanie, <b>won't tidy</b> to odmowa. <i>Spend hours</i> + <b>-ing</b> (<i>building</i>)."},
-  {s:"In the 80s, my parents|save up / all year / so / we / can / go / to the seaside / for two weeks|.", a:["would save up all year so we could go to the seaside for two weeks","would save up all year so that we could go to the seaside for two weeks","used to save up all year so we could go to the seaside for two weeks"], u:'past',
-   e:"Coś powtarzanego co roku w przeszłości → <b>would</b>. W części z <i>so (that)</i> <i>can</i> też przechodzi w przeszłość: <b>could</b>."},
-  {s:"“The printer's jammed again.” “Leave it, I|have / look / at it / after lunch|.”", a:["'ll have a look at it after lunch"], u:'fut',
-   e:"Propozycja złożona w chwili mówienia → <b>'ll</b>. Zwrot <b>have a look at</b> wymaga przedimka <i>a</i>."},
-  {s:"|you / mind / not / smoke / near / the children|? It's really bothering me.", a:["would you mind not smoking near the children"], u:'pol',
-   e:"<b>Would you mind + -ing</b>. Żeby poprosić, by ktoś czegoś <i>nie</i> robił, stawiasz <i>not</i> przed formą -ing: <b>mind not smoking</b>."},
-  {s:"However hard we pulled, the old drawer|not / open / more than / few / centimetres|.", a:["wouldn't open more than a few centimetres"], u:'ref',
-   e:"<i>However hard we pulled</i> to przeszłość → <b>wouldn't</b>. Uwaga na przedimek: <b>a few</b> = kilka; samo <i>few</i> znaczy „niewiele, za mało”."},
-  {s:"Our cat is a creature of habit too. If you leave a door open, she|always / find / way / into / the airing cupboard|.", a:["will always find a way into the airing cupboard","will always find her way into the airing cupboard"], u:'hab',
-   e:"Typowe zachowanie zwierzęcia → <b>will</b>. <i>Always</i> stoi po <i>will</i>. Do <i>way</i> trzeba dodać <b>a</b> albo <b>her</b>."},
-  {s:"I've asked the landlord three times to fix the boiler, but he|not / even / answer / my emails / never mind / send / someone round|.", a:["won't even answer my emails, never mind send someone round","won't even answer my emails, never mind sending someone round"], u:'ref',
-   e:"<i>I've asked</i> → sytuacja trwa, więc <b>won't</b>. <b>Not even… never mind…</b> = nawet nie…, a co dopiero… Po <i>never mind</i> możesz dać bezokolicznik albo -ing."},
-  {s:"If the trains weren't so unreliable, I|happily / leave / the car / at home / every day|.", a:["would happily leave the car at home every day"], u:'cond',
-   e:"Warunek nierealny (<i>weren't</i>) → <b>would</b>. Przysłówek <i>happily</i> stoi między <i>would</i> a czasownikiem."},
-  {s:"She promised she|never / tell / anyone / what / I / say|, but within a week the whole office knew.", a:["would never tell anyone what I had said","would never tell anyone what I said"], u:'rep',
-   e:"<i>“I'll never tell anyone”</i> → she promised she <b>would never tell</b>. Drugi czasownik też się cofa: <b>what I had said</b> (potocznie także <i>what I said</i>)."},
-  {s:"The kids are completely exhausted, but they|not / go / to bed / until / they / finish / their film|.", a:["won't go to bed until they've finished their film","won't go to bed until they finish their film"], u:'ref',
-   e:"Odmowa teraz → <b>won't</b>. Po <b>until</b> mówiąc o przyszłości używasz czasu teraźniejszego (<i>finish / have finished</i>), nigdy <i>will</i>."}
+  {"s":"My grandmother is 85, but she|not / hear of / anyone / help / her / with the shopping|.","a":["won't hear of anyone helping her with the shopping"],"u":"ref","e":"<b>won't hear of</b> = nie chce nawet słyszeć o… — uparta odmowa, stała cecha. Po <i>hear of</i> idzie osoba + forma <b>-ing</b>: <i>anyone helping</i>."},
+  {"s":"My dad's a real creature of habit. Every evening he|pour / himself / glass of wine / and / fall asleep / in front of the news|.","a":["'ll pour himself a glass of wine and fall asleep in front of the news","'ll pour himself a glass of wine and will fall asleep in front of the news"],"u":"hab","e":"Stały wieczorny rytuał → <b>will</b>. Jedno <i>will</i> obsługuje oba czasowniki połączone <i>and</i>. Trzeba dodać przedimek: <b>a</b> glass of wine."},
+  {"s":"When we were students, we|stay up / all night / argue / about politics|, and then sleep through our morning lectures.","a":["would stay up all night arguing about politics","used to stay up all night arguing about politics"],"u":"past","e":"Powtarzane zachowanie z przeszłości → <b>would</b>. Po <i>stay up all night</i> drugi czasownik w <b>-ing</b> (<i>arguing</i>), tak jak w <i>spend hours reminiscing</i>."},
+  {"s":"As a child, I|be / terrified / dark|, so my parents always left the landing light on.","a":["used to be terrified of the dark","was terrified of the dark"],"u":"past","e":"<b>Pułapka.</b> <i>Be terrified</i> to stan, nie czynność. <i>Would</i> nie opisuje stanów w przeszłości, więc tylko <b>used to be</b> albo <b>was</b>. Dodajesz też <i>of the</i>."},
+  {"s":"I've tried everything – WD-40, hot water, a hammer – but the bolt|still / not / budge / an inch|.","a":["still won't budge an inch"],"u":"ref","e":"Present perfect (<i>I've tried</i>) pokazuje, że problem trwa → <b>won't</b>. <b>Still</b> stoi przed <i>won't</i>. <i>Not budge an inch</i> = ani drgnie."},
+  {"s":"She's in a terrible mood. If I were you, I|not / even / mention / the party / let alone / ask / her / to help|.","a":["wouldn't even mention the party, let alone ask her to help"],"u":"cond","e":"Rada z <i>If I were you</i> → <b>wouldn't</b>. Po <b>let alone</b> (a co dopiero) ten sam typ bezokolicznika co wcześniej, bez <i>to</i>: <i>let alone ask</i>."},
+  {"s":"What|we / usually / do / on Christmas Eve / is / go / to my aunt's|, and then everyone ends up at our place.","a":["we'll usually do on Christmas Eve is go to my aunt's","we'll usually do on Christmas Eve is to go to my aunt's"],"u":"hab","e":"Konstrukcja <b>What X will do is…</b> najpierw zapowiada „to, co zwykle robimy”, a po <i>is</i> pokazuje samą czynność (bezokolicznik, z <i>to</i> albo bez). Przysłówek <i>usually</i> stoi między <i>will</i> a <i>do</i>."},
+  {"s":"My flatmate drives me mad. He|borrow / my things / without / ask / and then / swear blind / he / not / touch / them|!","a":["will borrow my things without asking and then swear blind he hasn't touched them","will borrow my things without asking and then swear blind he didn't touch them","will borrow my things without asking and then swear blind he never touched them"],"u":"annoy","e":"Akcentowane <b>WILL</b> = irytujący nawyk. Po przyimku <i>without</i> zawsze <b>-ing</b> (<i>asking</i>). <i>Swear blind</i> = przysięgać w żywe oczy; to samo <i>will</i> obejmuje oba czasowniki."},
+  {"s":"Don't bother ringing the office now – everyone|go home / ages ago|.","a":["will have gone home ages ago"],"u":"ded","e":"Przypuszczenie o przeszłości: <b>will have + III forma</b> (<i>gone</i>). Mówiący jest pewny, choć tego nie sprawdził."},
+  {"s":"When I asked him about the money, he|swear / he / pay / me / back / by the end of the month|, but I'm still waiting.","a":["swore he would pay me back by the end of the month","swore that he would pay me back by the end of the month"],"u":"rep","e":"Jego słowa brzmiały <i>“I'll pay you back”</i>. W relacji z przeszłości <b>will → would</b>, a sam czasownik relacjonujący też jest w przeszłości: <b>swore</b>."},
+  {"s":"My son|happily / spend / hours / build / Lego / but / he / not / tidy / it / away / afterwards|.","a":["will happily spend hours building Lego, but he won't tidy it away afterwards"],"u":"hab","e":"Dwa użycia w jednym zdaniu: <b>will happily spend</b> to typowe zachowanie, <b>won't tidy</b> to odmowa. <i>Spend hours</i> + <b>-ing</b> (<i>building</i>)."},
+  {"s":"In the 80s, my parents|save up / all year / so / we / can / go / to the seaside / for two weeks|.","a":["would save up all year so we could go to the seaside for two weeks","would save up all year so that we could go to the seaside for two weeks","used to save up all year so we could go to the seaside for two weeks"],"u":"past","e":"Coś powtarzanego co roku w przeszłości → <b>would</b>. W części z <i>so (that)</i> <i>can</i> też przechodzi w przeszłość: <b>could</b>."},
+  {"s":"“The printer's jammed again.” “Leave it, I|have / look / at it / after lunch|.”","a":["'ll have a look at it after lunch"],"u":"fut","e":"Propozycja złożona w chwili mówienia → <b>'ll</b>. Zwrot <b>have a look at</b> wymaga przedimka <i>a</i>."},
+  {"s":"|you / mind / not / smoke / near / the children|? It's really bothering me.","a":["would you mind not smoking near the children"],"u":"pol","e":"<b>Would you mind + -ing</b>. Żeby poprosić, by ktoś czegoś <i>nie</i> robił, stawiasz <i>not</i> przed formą -ing: <b>mind not smoking</b>."},
+  {"s":"However hard we pulled, the old drawer|not / open / more than / few / centimetres|.","a":["wouldn't open more than a few centimetres"],"u":"ref","e":"<i>However hard we pulled</i> to przeszłość → <b>wouldn't</b>. Uwaga na przedimek: <b>a few</b> = kilka; samo <i>few</i> znaczy „niewiele, za mało”."},
+  {"s":"Our cat is a creature of habit too. If you leave a door open, she|always / find / way / into / the airing cupboard|.","a":["will always find a way into the airing cupboard","will always find her way into the airing cupboard"],"u":"hab","e":"Typowe zachowanie zwierzęcia → <b>will</b>. <i>Always</i> stoi po <i>will</i>. Do <i>way</i> trzeba dodać <b>a</b> albo <b>her</b>."},
+  {"s":"I've asked the landlord three times to fix the boiler, but he|not / even / answer / my emails / never mind / send / someone round|.","a":["won't even answer my emails, never mind send someone round","won't even answer my emails, never mind sending someone round"],"u":"ref","e":"<i>I've asked</i> → sytuacja trwa, więc <b>won't</b>. <b>Not even… never mind…</b> = nawet nie…, a co dopiero… Po <i>never mind</i> możesz dać bezokolicznik albo -ing."},
+  {"s":"If the trains weren't so unreliable, I|happily / leave / the car / at home / every day|.","a":["would happily leave the car at home every day"],"u":"cond","e":"Warunek nierealny (<i>weren't</i>) → <b>would</b>. Przysłówek <i>happily</i> stoi między <i>would</i> a czasownikiem."},
+  {"s":"She promised she|never / tell / anyone / what / I / say|, but within a week the whole office knew.","a":["would never tell anyone what I had said","would never tell anyone what I said"],"u":"rep","e":"<i>“I'll never tell anyone”</i> → she promised she <b>would never tell</b>. Drugi czasownik też się cofa: <b>what I had said</b> (potocznie także <i>what I said</i>)."},
+  {"s":"The kids are completely exhausted, but they|not / go / to bed / until / they / finish / their film|.","a":["won't go to bed until they've finished their film","won't go to bed until they finish their film"],"u":"ref","e":"Odmowa teraz → <b>won't</b>. Po <b>until</b> mówiąc o przyszłości używasz czasu teraźniejszego (<i>finish / have finished</i>), nigdy <i>will</i>."}
  ],
  [
-  {s:"My little brother is a nightmare at dinner. He|not / touch / anything / green / however / much / ketchup / you / put on it|.", a:["won't touch anything green, however much ketchup you put on it"], u:'ref',
-   e:"Uparta odmowa, która powtarza się stale → <b>won't</b>. <b>However much</b> + rzeczownik niepoliczalny (<i>ketchup</i>) = nieważne, ile…"},
-  {s:"My nan|ring / me / every Sunday / and / ask / whether / I / eat / properly|.", a:["'ll ring me every Sunday and ask whether I'm eating properly","'ll ring me every Sunday and ask whether I eat properly"], u:'hab',
-   e:"Stały nawyk → <b>will</b>, jedno na oba czasowniki. W pytaniu zależnym szyk jak w zdaniu twierdzącym: <b>whether I'm eating</b>, nie <i>whether am I eating</i>."},
-  {s:"Every time we visited, Grandpa|insist / on / show / us / his stamp collection|, even though we'd seen it a hundred times.", a:["would insist on showing us his stamp collection"], u:'past',
-   e:"Powtarzane wizyty w przeszłości → <b>would</b>. Po <b>insist on</b> (przyimek) zawsze <b>-ing</b>: <i>showing</i>."},
-  {s:"Before she moved to London, my sister|have / long / curly / hair|.", a:["used to have long curly hair","had long curly hair","used to have long, curly hair","had long, curly hair"], u:'past',
-   e:"<b>Pułapka.</b> <i>Have hair</i> to stan, nie powtarzana czynność. <i>Would</i> nie pasuje, więc tylko <b>used to have</b> albo <b>had</b>."},
-  {s:"What|he / do / when / he's stressed / is / clean / the whole flat / from top to bottom|.", a:["he'll do when he's stressed is clean the whole flat from top to bottom","he'll do when he's stressed is to clean the whole flat from top to bottom"], u:'hab',
-   e:"<b>What he'll do… is…</b> podkreśla czynność, którą ktoś zwykle wykonuje. Po <i>is</i> czasownik w formie podstawowej (<i>clean</i>) albo z <i>to</i>."},
-  {s:"I wish you|stop / leave / wet towels / on / bedroom floor|!", a:["would stop leaving wet towels on the bedroom floor"], u:'annoy',
-   e:"<b>I wish + would</b> = narzekanie na czyjeś zachowanie, które chcemy zmienić. <i>Stop</i> + <b>-ing</b> (<i>leaving</i>) i przedimek <b>the</b> przed <i>bedroom floor</i>."},
-  {s:"Our old car was so unreliable. On cold mornings it|not / start / unless / we / push / it / down / the hill|.", a:["wouldn't start unless we pushed it down the hill"], u:'ref',
-   e:"Odmowa powtarzająca się w przeszłości → <b>wouldn't</b>. Po <b>unless</b> czas przeszły: <i>pushed</i>."},
-  {s:"Sorry to bother you, but|you / mind / keep an eye on / my bag / while / I / go / to the loo|?", a:["would you mind keeping an eye on my bag while I go to the loo"], u:'pol',
-   e:"<b>Would you mind + -ing</b> (<i>keeping</i>). <i>Keep an eye on</i> = przypilnować. Po <i>while</i> zwykły present."},
-  {s:"Their plane landed at six, so they|probably / get / to the hotel / by now|.", a:["'ll probably have got to the hotel by now","'ll probably have gotten to the hotel by now"], u:'ded',
-   e:"Przypuszczenie o czymś, co już się stało: <b>will have + III forma</b>. <i>Probably</i> stoi zaraz po <i>will</i>."},
-  {s:"The plumber said he|come / back / the following day / with / right part|, but he never turned up.", a:["would come back the following day with the right part"], u:'rep',
-   e:"<i>“I'll come back tomorrow”</i> → he said he <b>would come back the following day</b>. W mowie zależnej <i>tomorrow</i> zmienia się w <i>the following day</i>."},
-  {s:"After what happened last time, I|not / dream of / lend / him / money / again|.", a:["wouldn't dream of lending him money again"], u:'cond',
-   e:"<b>Wouldn't dream of + -ing</b> = w życiu bym nie… To hipotetyczne <i>would</i>: mówisz, czego nie zrobiłbyś w żadnych okolicznościach."},
-  {s:"On summer evenings, my brother and I|sneak out / after dark / and / go / swim / in the lake|.", a:["would sneak out after dark and go swimming in the lake","used to sneak out after dark and go swimming in the lake"], u:'past',
-   e:"Nawyk z dzieciństwa → <b>would</b>. Przy aktywnościach <b>go + -ing</b>: <i>go swimming</i>."},
-  {s:"“I've lost my keys again!” “Calm down. I|help / you / look for / them|.”", a:["'ll help you look for them","'ll help you to look for them"], u:'fut',
-   e:"Spontaniczna propozycja → <b>'ll</b>. Po <i>help you</i> możesz dać bezokolicznik z <i>to</i> albo bez."},
-  {s:"I|rather / not / talk about / it / if / you / not / mind|.", a:["'d rather not talk about it, if you don't mind","'d rather not talk about it if you don't mind"], u:'pol',
-   e:"<b>Would rather</b> + bezokolicznik bez <i>to</i>. Przeczenie: <b>rather not talk</b> (nie <i>wouldn't rather</i>). W <i>if you don't mind</i> zwykły present."},
-  {s:"Tom's so stubborn. Even when he's obviously wrong, he|not / admit / he / make / mistake|.", a:["won't admit he's made a mistake","won't admit that he's made a mistake","won't admit he made a mistake","won't admit he has made a mistake"], u:'ref',
-   e:"Stała cecha charakteru + odmowa → <b>won't</b>. Po <i>admit</i> zdanie w present perfect (<i>he's made</i>) i przedimek <b>a</b> mistake."},
-  {s:"A good waiter|never / let / customer / wait / more than / few minutes / for the bill|.", a:["will never let a customer wait more than a few minutes for the bill"], u:'hab',
-   e:"Ogólna prawda o typowym zachowaniu → <b>will</b>. <b>Let + osoba + bezokolicznik bez to</b> (<i>let a customer wait</i>) i <b>a few</b> minutes."},
-  {s:"My phone's been playing up all week. It|keep / freeze / and then / it / not / switch / off|.", a:["keeps freezing and then it won't switch off","will keep freezing and then it won't switch off"], u:'ref',
-   e:"Urządzenie, które „nie chce” działać, a sytuacja trwa → <b>won't switch off</b>. <i>Keep + -ing</i> = ciągle coś robi."},
-  {s:"If you could go back and talk to your 18-year-old self, what|you / tell / him / do / differently|?", a:["would you tell him to do differently"], u:'cond',
-   e:"Hipoteza (<i>could go back</i>) → pytanie z <b>would you tell</b>. <i>Tell + osoba + to do</i>: trzeba dodać <b>to</b>."},
-  {s:"After the argument, she swore she|never / speak / to me / again|, and she kept her word for ten years.", a:["would never speak to me again"], u:'rep',
-   e:"<i>“I'll never speak to you again”</i> → she swore she <b>would never speak</b> to me again. <i>Never</i> stoi między <i>would</i> a czasownikiem."},
-  {s:"He's incredibly generous. He|give / you / shirt off his back|if you asked him.", a:["would give you the shirt off his back"], u:'cond',
-   e:"Hipoteza z <i>if you asked</i> → <b>would</b>. Idiom: <b>give you the shirt off his back</b> = oddałby ci ostatnią koszulę."}
+  {"s":"My little brother is a nightmare at dinner. He|not / touch / anything / green / however / much / ketchup / you / put on it|.","a":["won't touch anything green, however much ketchup you put on it"],"u":"ref","e":"Uparta odmowa, która powtarza się stale → <b>won't</b>. <b>However much</b> + rzeczownik niepoliczalny (<i>ketchup</i>) = nieważne, ile…"},
+  {"s":"My nan|ring / me / every Sunday / and / ask / whether / I / eat / properly|.","a":["'ll ring me every Sunday and ask whether I'm eating properly","'ll ring me every Sunday and ask whether I eat properly"],"u":"hab","e":"Stały nawyk → <b>will</b>, jedno na oba czasowniki. W pytaniu zależnym szyk jak w zdaniu twierdzącym: <b>whether I'm eating</b>, nie <i>whether am I eating</i>."},
+  {"s":"Every time we visited, Grandpa|insist / on / show / us / his stamp collection|, even though we'd seen it a hundred times.","a":["would insist on showing us his stamp collection"],"u":"past","e":"Powtarzane wizyty w przeszłości → <b>would</b>. Po <b>insist on</b> (przyimek) zawsze <b>-ing</b>: <i>showing</i>."},
+  {"s":"Before she moved to London, my sister|have / long / curly / hair|.","a":["used to have long curly hair","had long curly hair","used to have long, curly hair","had long, curly hair"],"u":"past","e":"<b>Pułapka.</b> <i>Have hair</i> to stan, nie powtarzana czynność. <i>Would</i> nie pasuje, więc tylko <b>used to have</b> albo <b>had</b>."},
+  {"s":"What|he / do / when / he's stressed / is / clean / the whole flat / from top to bottom|.","a":["he'll do when he's stressed is clean the whole flat from top to bottom","he'll do when he's stressed is to clean the whole flat from top to bottom"],"u":"hab","e":"<b>What he'll do… is…</b> podkreśla czynność, którą ktoś zwykle wykonuje. Po <i>is</i> czasownik w formie podstawowej (<i>clean</i>) albo z <i>to</i>."},
+  {"s":"I wish you|stop / leave / wet towels / on / bedroom floor|!","a":["would stop leaving wet towels on the bedroom floor"],"u":"annoy","e":"<b>I wish + would</b> = narzekanie na czyjeś zachowanie, które chcemy zmienić. <i>Stop</i> + <b>-ing</b> (<i>leaving</i>) i przedimek <b>the</b> przed <i>bedroom floor</i>."},
+  {"s":"Our old car was so unreliable. On cold mornings it|not / start / unless / we / push / it / down / the hill|.","a":["wouldn't start unless we pushed it down the hill"],"u":"ref","e":"Odmowa powtarzająca się w przeszłości → <b>wouldn't</b>. Po <b>unless</b> czas przeszły: <i>pushed</i>."},
+  {"s":"Sorry to bother you, but|you / mind / keep an eye on / my bag / while / I / go / to the loo|?","a":["would you mind keeping an eye on my bag while I go to the loo"],"u":"pol","e":"<b>Would you mind + -ing</b> (<i>keeping</i>). <i>Keep an eye on</i> = przypilnować. Po <i>while</i> zwykły present."},
+  {"s":"Their plane landed at six, so they|probably / get / to the hotel / by now|.","a":["'ll probably have got to the hotel by now","'ll probably have gotten to the hotel by now"],"u":"ded","e":"Przypuszczenie o czymś, co już się stało: <b>will have + III forma</b>. <i>Probably</i> stoi zaraz po <i>will</i>."},
+  {"s":"The plumber said he|come / back / the following day / with / right part|, but he never turned up.","a":["would come back the following day with the right part"],"u":"rep","e":"<i>“I'll come back tomorrow”</i> → he said he <b>would come back the following day</b>. W mowie zależnej <i>tomorrow</i> zmienia się w <i>the following day</i>."},
+  {"s":"After what happened last time, I|not / dream of / lend / him / money / again|.","a":["wouldn't dream of lending him money again"],"u":"cond","e":"<b>Wouldn't dream of + -ing</b> = w życiu bym nie… To hipotetyczne <i>would</i>: mówisz, czego nie zrobiłbyś w żadnych okolicznościach."},
+  {"s":"On summer evenings, my brother and I|sneak out / after dark / and / go / swim / in the lake|.","a":["would sneak out after dark and go swimming in the lake","used to sneak out after dark and go swimming in the lake"],"u":"past","e":"Nawyk z dzieciństwa → <b>would</b>. Przy aktywnościach <b>go + -ing</b>: <i>go swimming</i>."},
+  {"s":"“I've lost my keys again!” “Calm down. I|help / you / look for / them|.”","a":["'ll help you look for them","'ll help you to look for them"],"u":"fut","e":"Spontaniczna propozycja → <b>'ll</b>. Po <i>help you</i> możesz dać bezokolicznik z <i>to</i> albo bez."},
+  {"s":"I|rather / not / talk about / it / if / you / not / mind|.","a":["'d rather not talk about it, if you don't mind","'d rather not talk about it if you don't mind"],"u":"pol","e":"<b>Would rather</b> + bezokolicznik bez <i>to</i>. Przeczenie: <b>rather not talk</b> (nie <i>wouldn't rather</i>). W <i>if you don't mind</i> zwykły present."},
+  {"s":"Tom's so stubborn. Even when he's obviously wrong, he|not / admit / he / make / mistake|.","a":["won't admit he's made a mistake","won't admit that he's made a mistake","won't admit he made a mistake","won't admit he has made a mistake"],"u":"ref","e":"Stała cecha charakteru + odmowa → <b>won't</b>. Po <i>admit</i> zdanie w present perfect (<i>he's made</i>) i przedimek <b>a</b> mistake."},
+  {"s":"A good waiter|never / let / customer / wait / more than / few minutes / for the bill|.","a":["will never let a customer wait more than a few minutes for the bill"],"u":"hab","e":"Ogólna prawda o typowym zachowaniu → <b>will</b>. <b>Let + osoba + bezokolicznik bez to</b> (<i>let a customer wait</i>) i <b>a few</b> minutes."},
+  {"s":"My phone's been playing up all week. It|keep / freeze / and then / it / not / switch / off|.","a":["keeps freezing and then it won't switch off","will keep freezing and then it won't switch off"],"u":"ref","e":"Urządzenie, które „nie chce” działać, a sytuacja trwa → <b>won't switch off</b>. <i>Keep + -ing</i> = ciągle coś robi."},
+  {"s":"If you could go back and talk to your 18-year-old self, what|you / tell / him / do / differently|?","a":["would you tell him to do differently"],"u":"cond","e":"Hipoteza (<i>could go back</i>) → pytanie z <b>would you tell</b>. <i>Tell + osoba + to do</i>: trzeba dodać <b>to</b>."},
+  {"s":"After the argument, she swore she|never / speak / to me / again|, and she kept her word for ten years.","a":["would never speak to me again"],"u":"rep","e":"<i>“I'll never speak to you again”</i> → she swore she <b>would never speak</b> to me again. <i>Never</i> stoi między <i>would</i> a czasownikiem."},
+  {"s":"He's incredibly generous. He|give / you / shirt off his back|if you asked him.","a":["would give you the shirt off his back"],"u":"cond","e":"Hipoteza z <i>if you asked</i> → <b>would</b>. Idiom: <b>give you the shirt off his back</b> = oddałby ci ostatnią koszulę."}
  ],
  [
-  {s:"We tried to get the cat into the carrier for twenty minutes, but she|not / go / in / no matter / what / we / do|.", a:["wouldn't go in, no matter what we did","wouldn't go in no matter what we did"], u:'ref',
-   e:"Odmowa w przeszłości → <b>wouldn't</b>. Po <b>no matter what</b> czas przeszły, bo całe zdanie jest o przeszłości: <i>did</i>."},
-  {s:"My boss|send / emails / at midnight / and / expect / answer / by 8 am|.", a:["will send emails at midnight and expect an answer by 8 am","will send emails at midnight and expect answers by 8 am"], u:'annoy',
-   e:"Irytujący, typowy nawyk → <b>WILL</b> (w mowie z akcentem). Dodaj <b>an</b> answer, bo <i>answer</i> jest policzalne."},
-  {s:"When my parents were out, my older brother|lock / me / in / bathroom / and / pretend / he / lose / the key|.", a:["would lock me in the bathroom and pretend he'd lost the key","would lock me in the bathroom and pretend he had lost the key","would lock me in the bathroom and pretend he lost the key"], u:'past',
-   e:"Powtarzane zachowanie z dzieciństwa → <b>would</b>. Po <i>pretend</i> zaprzeszły <b>he'd lost</b>, bo „zgubienie” miało być wcześniej niż udawanie."},
-  {s:"When I was at school, I|not / like / maths / at all|.", a:["didn't use to like maths at all","didn't like maths at all","didn't used to like maths at all"], u:'past',
-   e:"<b>Pułapka.</b> <i>Like</i> to stan, nie czynność, więc <i>wouldn't like</i> zmienia znaczenie na „nie chciałbym”. Poprawnie: <b>didn't use to like</b> albo <b>didn't like</b>."},
-  {s:"What|I / normally / do / when / I / can't sleep / is / get up / and / read / for half an hour|.", a:["I'll normally do when I can't sleep is get up and read for half an hour","I'll normally do when I can't sleep is to get up and read for half an hour"], u:'hab',
-   e:"<b>What I'll normally do… is…</b> podkreśla nawyk. <i>Normally</i> stoi między <i>will</i> a <i>do</i>, a po <i>is</i> stoją bezokoliczniki <i>get up and read</i>."},
-  {s:"Don't phone Anna now. It's nearly midnight in Tokyo, so she|probably / be / fast asleep / by now|.", a:["'ll probably be fast asleep by now"], u:'ded',
-   e:"Domysł o teraźniejszości → <b>'ll be</b>. <i>Probably</i> stoi po <i>will</i>."},
-  {s:"I've asked nicely, I've shouted, I've even bribed him, but my son|still / not / eat / anything / that / look / healthy|.", a:["still won't eat anything that looks healthy"], u:'ref',
-   e:"Trwająca odmowa → <b>won't</b>. <b>Still</b> stoi przed <i>won't</i>, nie po. W zdaniu względnym <i>that looks</i>: 3. osoba, końcówka <b>-s</b>."},
-  {s:"I|be / grateful / if / you / can / send / me / the report / by Friday|.", a:["would be grateful if you could send me the report by Friday","'d be grateful if you could send me the report by Friday"], u:'pol',
-   e:"Formalna, bardzo grzeczna prośba, typowa w mailach: <b>I would be grateful if you could…</b>. <i>Can</i> zmienia się w <b>could</b>."},
-  {s:"My sister|not / admit / she / be / wrong / even if / you / show / her / the proof|.", a:["wouldn't admit she was wrong even if you showed her the proof","wouldn't admit that she was wrong even if you showed her the proof","wouldn't admit she was wrong, even if you showed her the proof"], u:'cond',
-   e:"Hipoteza (<i>even if you showed</i>) → <b>wouldn't</b>. W obu częściach czas przeszły: <b>was</b>, <b>showed</b>."},
-  {s:"The mechanic told us the car|be / ready / by the end of the week|, but it took a month.", a:["would be ready by the end of the week"], u:'rep',
-   e:"<i>“It'll be ready by the end of the week”</i> → he told us it <b>would be</b> ready. Typowe przesunięcie <b>will → would</b>."},
-  {s:"On sunny days, our grandad|sit / on the porch / for hours / watch / the world / go by|.", a:["will sit on the porch for hours, watching the world go by","will sit on the porch for hours watching the world go by"], u:'hab',
-   e:"Typowy obraz zachowania → <b>will</b>. <i>Sit for hours</i> + <b>-ing</b> (<i>watching</i>). <i>Watch + obiekt + bezokolicznik</i>: <i>watch the world go by</i>."},
-  {s:"When I worked in a call centre, some customers|shout / at me / for ten minutes / before / even / tell / me / what / the problem / be|.", a:["would shout at me for ten minutes before even telling me what the problem was"], u:'past',
-   e:"Powtarzane sytuacje z dawnej pracy → <b>would</b>. Po przyimku <i>before</i> forma <b>-ing</b> (<i>before even telling</i>), a w pytaniu zależnym szyk twierdzący: <i>what the problem was</i>."},
-  {s:"“This suitcase weighs a ton.” “Give it here – I|carry / it / up / stairs / for you|.”", a:["'ll carry it up the stairs for you","'ll carry it upstairs for you"], u:'fut',
-   e:"Spontaniczna propozycja → <b>'ll</b>. Przedimek: <b>up the stairs</b> (albo jednym słowem <i>upstairs</i>)."},
-  {s:"|you / like / me / have / word / with / him / about it|?", a:["would you like me to have a word with him about it"], u:'pol',
-   e:"<b>Would you like me to…?</b> = propozycja, że zrobię coś dla ciebie. Trzeba dodać <b>to</b>. <i>Have a word with</i> = porozmawiać z kimś."},
-  {s:"The talks broke down because the union|not / accept / anything / less than / 10 percent / pay rise|.", a:["wouldn't accept anything less than a 10 percent pay rise","wouldn't accept anything less than a 10% pay rise"], u:'ref',
-   e:"Odmowa w przeszłości → <b>wouldn't</b>. <b>A</b> 10 percent pay rise: przedimek, bo chodzi o jedną podwyżkę."},
-  {s:"Babies|put / almost anything / in their mouths / if / you / not / watch / them|.", a:["will put almost anything in their mouths if you don't watch them"], u:'hab',
-   e:"Typowe zachowanie (ogólnie o niemowlętach) → <b>will</b>. W części z <i>if</i> zwykły present: <b>don't watch</b>."},
-  {s:"Whatever I tried, the baby|not / stop / cry / until / her dad / come / home|.", a:["wouldn't stop crying until her dad came home"], u:'ref',
-   e:"Przeszłość → <b>wouldn't</b>. <i>Stop</i> + <b>-ing</b> (<i>crying</i>), a po <i>until</i> czas przeszły: <b>came</b>."},
-  {s:"Honestly, I|not / mind / work / weekends / if / the pay / be / better|.", a:["wouldn't mind working weekends if the pay was better","wouldn't mind working weekends if the pay were better"], u:'cond',
-   e:"Hipoteza → <b>wouldn't mind + -ing</b>. W warunku przeszły: <b>was</b> (albo formalnie <i>were</i>)."},
-  {s:"Right, that's it – I|tell / her / the truth / tonight / whatever / happen|!", a:["'ll tell her the truth tonight, whatever happens","'ll tell her the truth tonight whatever happens"], u:'fut',
-   e:"Decyzja zapada w chwili mówienia (<i>Right, that's it</i>) → <b>'ll</b>. Po <i>whatever</i> o przyszłości zwykły present: <b>happens</b>."},
-  {s:"My ex|always / turn up / late / and then / blame / the traffic|. Every single time!", a:["would always turn up late and then blame the traffic"], u:'annoy',
-   e:"Akcentowane <b>WOULD</b> = irytujący nawyk w przeszłości (to odpowiednik <i>WILL</i>, ale o przeszłości). Jedno <i>would</i> obejmuje oba czasowniki."}
+  {"c":2,"s":"PC Plumb didn't open the door for the new DCI, because he thought she|probably / not / want / him / to|.","a":["probably wouldn't want him to"],"u":"rep","e":"Jego myśl: <i>“She probably won't want me to”</i>. W relacji z przeszłości <b>won't → wouldn't</b>. Przy przeczeniu <b>probably</b> stoi <i>przed</i> modalem: <i>probably wouldn't</i> (ale <i>would probably</i>)."},
+  {"c":2,"s":"Before she left Manchester, Jane's old boss told her that the men in Pilton|love / her / once / they / get / to know / her|.","a":["would love her once they got to know her","would love her once they had got to know her"],"u":"rep","e":"<i>“They'll love you once they get to know you”</i> → he told her they <b>would love</b> her. W zdaniu czasowym po <i>once</i> czas też się cofa: <b>got</b>."},
+  {"c":2,"s":"George introduced Jane to the team: “As from today, DCI Honeywell|take over / running / this department|.”","a":["will be taking over the running of this department","will take over the running of this department"],"u":"fut","e":"<b>Will be + -ing</b> (future continuous) opisuje coś, co jest już ustalone i po prostu nastąpi. Brzmi oficjalnie, dlatego pasuje do przedstawiania nowej szefowej. Dodaj <i>the running of</i>."},
+  {"c":6,"s":"“It's nearly half past five,” said Jane. “We|better / go / straight / to / Jack Peck's house|.”","a":["'d better go straight to Jack Peck's house","had better go straight to Jack Peck's house"],"u":"trap","e":"<b>Pułapka.</b> W <i>we'd better</i> skrót <b>'d</b> to <b>had</b>, nie <i>would</i>. <i>Had better</i> + bezokolicznik bez <i>to</i> = lepiej, żebyśmy… (rada na teraz, mimo formy przeszłej)."},
+  {"c":2,"s":"Maggie told Jane: “If you get Pete Fish on your side, you|not / have / any trouble / with / rest / of the team|.”","a":["won't have any trouble with the rest of the team"],"u":"fut","e":"Pierwszy tryb warunkowy (realna możliwość): <i>if</i> + present, a w drugiej części <b>will / won't</b>. Nigdy nie dawaj <i>will</i> po <i>if</i> w tym znaczeniu. Dodaj <b>the</b> rest."},
+  {"c":3,"s":"Jane had hoped that in such a quiet rural area she|rarely / have / deal with / murders|.","a":["would rarely have to deal with murders"],"u":"rep","e":"Przyszłość widziana z przeszłości (<i>had hoped</i>) → <b>would</b>. <i>Rarely</i> stoi między <i>would</i> a czasownikiem; <b>have to</b> + bezokolicznik."},
+  {"c":3,"s":"Lost on the moor in the rain, Jane thought she|much / rather / be / at home / with / her cat / and / glass of wine|.","a":["would much rather be at home with her cat and a glass of wine","'d much rather be at home with her cat and a glass of wine"],"u":"pol","e":"<b>Would rather</b> + bezokolicznik bez <i>to</i>, wzmocnione przez <b>much</b>. Dodaj <b>a</b> glass of wine."},
+  {"c":3,"s":"Looking back, Jane|prefer / not / argue / with Pete / on the very day / the murder / be / discovered|.","a":["would have preferred not to argue with Pete on the very day the murder was discovered","would have preferred not to have argued with Pete on the very day the murder was discovered"],"u":"cond","e":"<b>Would have + III forma</b> = coś w przeszłości, co wolałbyś, żeby wyglądało inaczej. Kłótnia już się odbyła, więc <b>would have preferred</b>. W podpowiedzi nie ma <i>have</i>, musisz je dodać sam."},
+  {"c":3,"s":"Pete told Jane that her big crack-down on car crime|be / complete / waste / of time|.","a":["would be a complete waste of time"],"u":"rep","e":"<i>“It'll be a waste of time”</i> → he told her it <b>would be</b> a waste of time. Dodaj przedimek <b>a</b>."},
+  {"c":4,"s":"Mervin warned the police that with Brian you never know what the boy|do / next / or / say / to / strangers|.","a":["will do next or say to strangers","'ll do next or say to strangers"],"u":"hab","e":"<b>You never know what he'll do</b> to typowe zachowanie, którego nie da się przewidzieć. Jedno <i>will</i> obejmuje oba czasowniki."},
+  {"c":3,"s":"PC Plumb offered to explain the way, but Jane said: “Don't worry, I|find / farm / even / without / map|.”","a":["'ll find the farm, even without a map","'ll find the farm even without a map"],"u":"fut","e":"Zapewnienie złożone w chwili mówienia → <b>'ll</b>. Dodaj przedimki: <b>the</b> farm, <b>a</b> map."},
+  {"c":4,"s":"After finding the body, Brian asked excitedly whether he|be / on TV / after / all this|.","a":["would be on TV after all this"],"u":"rep","e":"Pytanie <i>“Will I be on TV?”</i> w mowie zależnej: <i>he asked whether he</i> <b>would be</b>. Szyk twierdzący, bez inwersji."},
+  {"c":5,"s":"After Pete walked in again without knocking, Jane said: “I|appreciate / it / if / you / knock / before / come into / my office|.”","a":["'d appreciate it if you knocked before coming into my office","'d appreciate it if you would knock before you come into my office","'d appreciate it if you would knock before coming into my office","'d appreciate it if you knocked before you came into my office"],"u":"pol","e":"<b>I'd appreciate it if you…</b> + past simple albo + <b>would</b>. Wersja z <i>if you would knock</i> jest bardziej stanowcza i dokładnie tak mówi Jane w książce. Po <i>before</i> forma <b>-ing</b> albo zdanie."},
+  {"c":5,"s":"From the hill Jane watched the sheep. Every so often a lamb|lose / its mother / and / bleat / until / she / answer|.","a":["would lose its mother and bleat until she answered"],"u":"past","e":"Powtarzająca się scena opisana w narracji przeszłej → <b>would</b>, jedno na oba czasowniki. Po <i>until</i> czas przeszły: <b>answered</b>."},
+  {"c":5,"s":"Mervin said his brother's bees were dangerous: “Go anywhere near them and they|come after / you / straight away|.”","a":["'ll come after you straight away","will come after you straight away"],"u":"hab","e":"Tryb rozkazujący + <i>and</i> + <b>will</b> = typowa konsekwencja: „podejdź, a od razu…”. To opis tego, jak pszczoły zwykle się zachowują."},
+  {"c":5,"s":"|you / mind / show / me / round / the farm|, Mr Peck?","a":["would you mind showing me round the farm","would you mind showing me around the farm"],"u":"pol","e":"<b>Would you mind + -ing</b> (<i>showing</i>). <i>Show somebody round</i> = oprowadzić."},
+  {"c":6,"s":"Pete believed that farmers who spend whole days with animals|often / forget / how / talk / to people|.","a":["will often forget how to talk to people"],"u":"hab","e":"Uogólnienie o całej grupie ludzi → <b>will</b>. <i>Often</i> stoi po <i>will</i>; <b>how to talk</b>."},
+  {"c":6,"s":"The pathologist found skin under Rose's fingernails, so Jane said: “We|need / DNA test / on it / as soon as possible|.”","a":["'ll need a DNA test on it as soon as possible","will need a DNA test on it as soon as possible"],"u":"fut","e":"Decyzja i potrzeba wynikające z tego, co właśnie wiemy → <b>'ll need</b>. Dodaj <b>a</b> DNA test."},
+  {"c":6,"s":"Jane, a little sarcastic: “Where|we / be / without / your / expert knowledge / of / country life|, Pete?”","a":["would we be without your expert knowledge of country life"],"u":"cond","e":"Retoryczne pytanie hipotetyczne → <b>would we be</b>. To ironia: „co byśmy bez ciebie zrobili”."},
+  {"c":6,"s":"“Jack Peck|probably / finish / work / about now|,” Jane guessed, looking at the clock.","a":["'ll probably be finishing work about now","will probably be finishing work about now","'ll probably finish work about now"],"u":"ded","e":"Domysł o tym, co ktoś robi właśnie teraz → <b>will be + -ing</b>. <i>Probably</i> po <i>will</i>."}
  ],
  [
-  {s:"Since the accident, the dog|not / let / anyone / touch / his paw|.", a:["won't let anyone touch his paw"], u:'ref',
-   e:"Odmowa trwa do teraz → <b>won't</b>. <b>Let + osoba + bezokolicznik bez to</b>: <i>let anyone touch</i>."},
-  {s:"My teenage daughter|spend / hours / get ready / and then / decide / she / not / want / go out / after all|.", a:["will spend hours getting ready and then decide she doesn't want to go out after all"], u:'annoy',
-   e:"Typowe i irytujące zachowanie → <b>will</b>. <i>Spend hours</i> + <b>-ing</b>; <i>want</i> + <b>to go out</b>; w zdaniu po <i>decide</i> zwykły present."},
-  {s:"At my first job, the manager|make / us / stay / late / and then / complain / about / overtime bill|.", a:["would make us stay late and then complain about the overtime bill"], u:'past',
-   e:"Powtarzane w przeszłości → <b>would</b>. <b>Make + osoba + bezokolicznik bez to</b> (<i>make us stay</i>) i przedimek <b>the</b> overtime bill."},
-  {s:"When we lived in the countryside, we|own / two horses / and / donkey|.", a:["used to own two horses and a donkey","owned two horses and a donkey"], u:'past',
-   e:"<b>Pułapka.</b> <i>Own</i> to stan (posiadanie), więc <i>would</i> odpada: <b>used to own</b> albo <b>owned</b>. Dodaj <b>a</b> donkey."},
-  {s:"What|my kids / do / the minute / they / get home / is / switch on / the Xbox|.", a:["my kids will do the minute they get home is switch on the Xbox","my kids will do the minute they get home is to switch on the Xbox"], u:'hab',
-   e:"<b>What X will do is…</b> podkreśla przewidywalne zachowanie. <i>The minute they get home</i> = gdy tylko wejdą; po nim zwykły present."},
-  {s:"“Whose is this coat?” “It|be / Mark's / he / always / leave / his stuff / here|.”", a:["'ll be Mark's – he always leaves his stuff here","'ll be Mark's, he always leaves his stuff here","'ll be Mark's he always leaves his stuff here"], u:'ded',
-   e:"Pewne przypuszczenie → <b>'ll be</b>. W drugiej części zwykły present simple (<b>leaves</b>), bo to stały fakt, nie domysł."},
-  {s:"We'd booked the restaurant months in advance, but they|not / let / us / in / because / Tom / wear / trainers|.", a:["wouldn't let us in because Tom was wearing trainers","wouldn't let us in because Tom wore trainers"], u:'ref',
-   e:"Odmowa w przeszłości → <b>wouldn't let</b>. Stan w tle tej sytuacji: <b>was wearing</b> (albo <i>wore</i>)."},
-  {s:"I|appreciate / it / if / you / not / mention / this / to anyone|.", a:["would appreciate it if you didn't mention this to anyone","'d appreciate it if you didn't mention this to anyone"], u:'pol',
-   e:"Uprzejma prośba: <b>I'd appreciate it if you…</b> + czas przeszły (<i>didn't mention</i>). Nie zapomnij o <b>it</b>."},
-  {s:"Make him a sandwich. Knowing him, he|not / eat / anything / since breakfast|.", a:["won't have eaten anything since breakfast"], u:'ded',
-   e:"Przypuszczenie o przeszłości → <b>won't have + III forma</b> (<i>eaten</i>). <i>Knowing him</i> sygnalizuje, że to domysł."},
-  {s:"My landlord assured me he|sort out / the damp / before / winter|, but here we are in December.", a:["would sort out the damp before winter","would sort the damp out before winter","would sort out the damp before the winter"], u:'rep',
-   e:"<i>“I'll sort it out before winter”</i> → he assured me he <b>would sort out</b> the damp. <i>Will → would</i> po czasowniku relacjonującym w przeszłości."},
-  {s:"If I were you, I|not / sign / anything / until / lawyer / have / look / at it|.", a:["wouldn't sign anything until a lawyer has had a look at it","wouldn't sign anything until a lawyer had a look at it","wouldn't sign anything until a lawyer has looked at it","wouldn't sign anything until a lawyer's had a look at it"], u:'cond',
-   e:"Rada → <b>wouldn't</b>. Po <i>until</i> nie używasz <i>will</i>: <b>has had a look</b>. Dwa przedimki do dodania: <b>a</b> lawyer, <b>a</b> look."},
-  {s:"When I was little, my mum|hide / the biscuits / on / top shelf / but / I / always / find / them|.", a:["would hide the biscuits on the top shelf, but I would always find them","would hide the biscuits on the top shelf, but I'd always find them","would hide the biscuits on the top shelf, but I always found them","used to hide the biscuits on the top shelf, but I always found them"], u:'past',
-   e:"Dwa powtarzane działania z dzieciństwa → <b>would hide</b> i <b>I'd always find</b>. <i>Always</i> stoi po <i>would</i>. Dodaj <b>the</b> top shelf."},
-  {s:"“I can't get this app to work.” “Pass it over, I|see / what / I / can / do|.”", a:["'ll see what I can do"], u:'fut',
-   e:"Spontaniczna oferta → <b>'ll</b>. <i>I'll see what I can do</i> to gotowy zwrot: „zobaczę, co się da zrobić”."},
-  {s:"Given the choice, I|much / rather / work / from home / than / commute / every day|.", a:["would much rather work from home than commute every day","'d much rather work from home than commute every day"], u:'pol',
-   e:"<b>Would rather</b> + bezokolicznik bez <i>to</i>, wzmocnione: <b>much rather</b>. Po <i>than</i> też bezokolicznik bez <i>to</i> (<i>commute</i>)."},
-  {s:"No matter how many times I restarted it, the update|not / install / and / I / keep / get / same error message|.", a:["wouldn't install and I kept getting the same error message","wouldn't install, and I kept getting the same error message"], u:'ref',
-   e:"Przeszłość → <b>wouldn't install</b>. Druga część w past simple: <b>kept getting</b> (<i>keep + -ing</i>) i <b>the</b> same."},
-  {s:"Kids that age|believe / almost anything / you / tell / them|, so be careful what you say.", a:["will believe almost anything you tell them"], u:'hab',
-   e:"Ogólna prawda o tym, jak zachowują się dzieci w tym wieku → <b>will</b>."},
-  {s:"My grandad's hearing is terrible, but he|not / wear / hearing aid / however / often / we / ask / him|.", a:["won't wear a hearing aid, however often we ask him","won't wear a hearing aid however often we ask him"], u:'ref',
-   e:"Uparta odmowa trwająca teraz → <b>won't</b>. Dodaj <b>a</b> hearing aid. <i>However often</i> = nieważne, jak często."},
-  {s:"What|you / do / if / you / find / wallet / full of cash / in the street|?", a:["would you do if you found a wallet full of cash in the street"], u:'cond',
-   e:"Hipoteza → <b>would you do</b> + <i>if</i> + past simple (<b>found</b>). Dodaj <b>a</b> wallet."},
-  {s:"Don't rush. By the time we get there, the film|already / start|anyway.", a:["will already have started","'ll already have started"], u:'fut',
-   e:"Przewidywanie czegoś, co będzie już zakończone w przyszłości: <b>will have + III forma</b>. <i>Already</i> stoi po <i>will</i>."},
-  {s:"In those days, my father|come home / exhausted / and / fall asleep / before / dinner / be / even / on the table|.", a:["would come home exhausted and fall asleep before dinner was even on the table","would come home exhausted and fall asleep before dinner was on the table"], u:'past',
-   e:"Powtarzany wieczorny obraz z przeszłości → <b>would</b>, jedno na oba czasowniki. Po <i>before</i> czas przeszły: <b>was even</b>."}
+  {"c":7,"s":"|you / excuse / us|, Inspector – my wife and I are meeting friends at the theatre.","a":["if you'll excuse us","if you will excuse us"],"u":"pol","e":"<b>If you'll excuse us</b> = „pozwolą państwo” (grzeczne pożegnanie). Wyjątek: tu <i>will</i> po <i>if</i> jest poprawne, bo wyraża uprzejmą prośbę o zgodę, nie przyszłość."},
+  {"c":8,"s":"Jane wondered: if Susan knew about the affair, she|have / strong motive / kill / Rose|.","a":["would have a strong motive to kill Rose","would have a strong motive for killing Rose"],"u":"cond","e":"Hipoteza (<i>if she knew</i>) → <b>would have</b>. Uwaga: to <i>would</i> + <i>have</i> = „miałaby”, a nie <i>would have</i> + III forma. Dodaj <b>a</b> strong motive <b>to</b> kill."},
+  {"c":8,"s":"In the traffic jam Jane planned her day: she|go / to Hunter Products / herself / and / send / Pete / to South Heasley|.","a":["would go to Hunter Products herself and send Pete to South Heasley"],"u":"rep","e":"<b>Przyszłość w przeszłości.</b> Plany opisane w narracji przeszłej: <i>“I'll go there myself”</i> → she <b>would go</b>. Jedno <i>would</i> obejmuje oba czasowniki."},
+  {"c":8,"s":"Jane promised herself that when the case was over, she|buy / best / car stereo / she / can / find|.","a":["would buy the best car stereo she could find"],"u":"rep","e":"Obietnica złożona w przeszłości → <b>would buy</b>. <i>Can</i> też się cofa: <b>could</b>. Dodaj <b>the</b> best."},
+  {"c":8,"s":"Mrs Keane said: “If Mr Peck left the building on Monday, it|be / in / our records|.”","a":["'ll be in our records","will be in our records"],"u":"ded","e":"Pewny domysł → <b>'ll be</b>. To nie jest drugi tryb warunkowy! <i>If he left</i> znaczy tu „jeśli rzeczywiście wyszedł” (prawdziwa przeszłość), więc druga część może mieć <i>will</i>."},
+  {"c":8,"s":"Mrs Keane turned to the receptionist: “I|have / records / bring / down / for you / right away|.”","a":["'ll have the records brought down for you right away"],"u":"fut","e":"Propozycja w chwili mówienia → <b>'ll</b>. Do tego konstrukcja <b>have + obiekt + III forma</b> („każę przynieść”): <i>have the records brought</i>."},
+  {"c":8,"s":"|it / be / possible / for / employee / leave / building / unnoticed|?","a":["would it be possible for an employee to leave the building unnoticed"],"u":"pol","e":"Grzeczne, ostrożne pytanie → <b>Would it be possible for… to…?</b> Dodaj <b>an</b> employee, <b>to</b> leave, <b>the</b> building."},
+  {"c":8,"s":"Pete thought Jack was the kind of man who|lose / his temper / if / woman / ask / him / leave / his wife|.","a":["would lose his temper if a woman asked him to leave his wife"],"u":"cond","e":"Hipoteza o czyimś charakterze → <b>would lose</b> + <i>if</i> + past (<b>asked</b>). <i>Ask somebody</i> <b>to</b> do."},
+  {"c":8,"s":"Too tired to cook, Jane found a frozen lasagne in the freezer and decided it|do / for / tonight|.","a":["would do for tonight"],"u":"rep","e":"<b>That'll do</b> = to wystarczy. W narracji przeszłej (jej myśl): it <b>would do</b>."},
+  {"c":9,"s":"Jane told George that DNA evidence|provide / key / if / they / can / get / samples / from / suspects|.","a":["would provide the key if they could get samples from the suspects"],"u":"cond","e":"Warunek i hipoteza → <b>would provide</b> + <i>if</i> + <b>could</b>. Dodaj <b>the</b> key, <b>the</b> suspects."},
+  {"c":9,"s":"Jane asked why Rose had ended the affair, but Susan said that Rose simply|not / tell / her / reason|.","a":["wouldn't tell her the reason"],"u":"ref","e":"Odmowa w przeszłości → <b>wouldn't</b> = nie chciała powiedzieć. Dodaj <b>the</b> reason."},
+  {"c":9,"s":"Before leaving, Jane told Susan that someone|come / round / later / take / DNA sample|.","a":["would come round later to take a DNA sample"],"u":"rep","e":"<i>“I'll send someone round”</i> → she told her someone <b>would come round</b>. Cel: <b>to take</b> <b>a</b> sample."},
+  {"c":9,"s":"|you / like / come / to the farm / with me / and / show / me / what / worry / Rose|?","a":["would you like to come to the farm with me and show me what worried Rose","would you like to come to the farm with me and show me what had worried Rose"],"u":"pol","e":"Zaproszenie: <b>Would you like to…?</b> W pytaniu zależnym szyk twierdzący i czas przeszły: <i>what worried Rose</i>."},
+  {"c":10,"s":"Elisa was confident: “If anything is wrong, we|not / miss / it / the sheep / look / terrible|.”","a":["won't miss it – the sheep will look terrible","won't miss it, the sheep will look terrible","won't miss it the sheep will look terrible"],"u":"fut","e":"Pierwszy tryb warunkowy i przewidywanie oparte na wiedzy → <b>won't miss</b>, <b>will look</b>. Oba czasowniki potrzebują własnego <i>will</i>, bo to dwa osobne zdania."},
+  {"c":10,"s":"Mervin pointed the shotgun at them: “Stay where you are or I|shoot / you / both|!”","a":["'ll shoot you both","will shoot you both"],"u":"fut","e":"Groźba: tryb rozkazujący + <b>or</b> + <b>will</b> („albo…”). Ten sam schemat co przy obietnicach."},
+  {"c":10,"s":"Jane heard sirens from every direction and knew that one police car|almost certainly / meet / Mervin / head on|.","a":["would almost certainly meet Mervin head on"],"u":"rep","e":"Przewidywanie z perspektywy przeszłości (<i>knew</i>) → <b>would</b>. <i>Almost certainly</i> stoi po <i>would</i>."},
+  {"c":11,"s":"At first Mervin sat in silence and|not / explain / why / he / threaten / Jane / with / gun|.","a":["wouldn't explain why he had threatened Jane with a gun","wouldn't explain why he threatened Jane with a gun"],"u":"ref","e":"Odmowa w przeszłości → <b>wouldn't explain</b>. Groźba była wcześniej, więc najlepiej zaprzeszły: <b>had threatened</b>. Dodaj <b>a</b> gun."},
+  {"c":11,"s":"Jane told Mervin it|save / everyone / lot of time / if / he / tell / truth / now|.","a":["would save everyone a lot of time if he told the truth now","would save everyone a lot of time if he would tell the truth now"],"u":"cond","e":"Hipoteza → <b>would save</b> + <i>if</i> + past. Wersja <i>if he would tell</i> to bardzo grzeczny nacisk („gdyby zechciał”). Dodaj <b>a</b> lot of, <b>the</b> truth."},
+  {"c":11,"s":"Mervin explained that he knew the boy was coming soon, so he|have / hide / body / somewhere|.","a":["would have to hide the body somewhere","'d have to hide the body somewhere"],"u":"rep","e":"<i>“I'll have to hide her”</i> → he knew he <b>would have to</b>. Tu <b>'d</b> = <i>would</i>, nie <i>had</i>: po nim stoi bezokolicznik <i>have to</i>."},
+  {"c":11,"s":"Mervin looked so ill that Jane said: “We|better / stop / for a while / so / doctor / can / examine / you|.”","a":["'d better stop for a while so a doctor can examine you","had better stop for a while so a doctor can examine you","'d better stop for a while so that a doctor can examine you"],"u":"trap","e":"<b>Pułapka.</b> <i>We'd better</i> = <b>had better</b>, a nie <i>would</i>. Po nim bezokolicznik bez <i>to</i> (<i>stop</i>). Dodaj <b>a</b> doctor."}
  ],
  [
-  {s:"I've been trying to log in all morning, but the system|not / accept / my password / even though / I / know / it / be / right|.", a:["won't accept my password, even though I know it's right","won't accept my password even though I know it's right"], u:'ref',
-   e:"Urządzenie „nie chce” działać, sytuacja trwa → <b>won't</b>. Po <i>even though</i> zwykły present: <i>I know it's right</i>."},
-  {s:"Our neighbours|have / barbecue / every / sunny weekend / and / invite / the whole street|.", a:["will have a barbecue every sunny weekend and invite the whole street"], u:'hab',
-   e:"Typowe zachowanie sąsiadów → <b>will</b>, jedno na oba czasowniki. Dodaj <b>a</b> barbecue."},
-  {s:"Whenever it snowed, the whole village|go / sledge / on / hill / behind the church|.", a:["would go sledging on the hill behind the church","used to go sledging on the hill behind the church"], u:'past',
-   e:"Nawyk w przeszłości (<i>whenever it snowed</i>) → <b>would</b>. <b>Go + -ing</b> przy aktywnościach i przedimek <b>the</b> hill."},
-  {s:"When he was younger, my grandfather|know / every / bird / in / forest / by its song|.", a:["used to know every bird in the forest by its song","knew every bird in the forest by its song"], u:'past',
-   e:"<b>Pułapka.</b> <i>Know</i> to stan, nie czynność. <i>Would know</i> tu nie zadziała: <b>used to know</b> albo <b>knew</b>."},
-  {s:"What|she / do / if / you / criticise / her / is / go / very quiet / and / sulk / for days|.", a:["she'll do if you criticise her is go very quiet and sulk for days","she'll do if you criticize her is go very quiet and sulk for days","she'll do if you criticise her is to go very quiet and sulk for days"], u:'hab',
-   e:"<b>What she'll do… is…</b> pokazuje typową reakcję. W części z <i>if</i> zwykły present (<i>criticise</i>), po <i>is</i> bezokoliczniki."},
-  {s:"Don't worry about the keys – Ewa|have / spare set / she / always / keep / one|.", a:["'ll have a spare set – she always keeps one","'ll have a spare set, she always keeps one","'ll have a spare set she always keeps one"], u:'ded',
-   e:"Pewny domysł o teraźniejszości → <b>'ll have</b>. Dodaj <b>a</b> spare set; w drugiej części fakt w present simple: <b>keeps</b>."},
-  {s:"My laptop|not / connect / to / Wi-Fi / unless / I / sit / right next to / router|.", a:["won't connect to the Wi-Fi unless I sit right next to the router","won't connect to Wi-Fi unless I sit right next to the router"], u:'ref',
-   e:"Urządzenie odmawia współpracy → <b>won't</b>. Po <i>unless</i> zwykły present (<i>sit</i>); dodaj <b>the</b> router."},
-  {s:"|you / be / so kind / as to / close / the door / behind you|?", a:["would you be so kind as to close the door behind you"], u:'pol',
-   e:"Bardzo formalna prośba: <b>Would you be so kind as to…?</b> Po <i>as to</i> bezokolicznik."},
-  {s:"It's gone eleven. The match|finish / by now|, so let's check the score.", a:["will have finished by now","'ll have finished by now"], u:'ded',
-   e:"Przypuszczenie o przeszłości → <b>will have + III forma</b> (<i>finished</i>)."},
-  {s:"When I checked in, the receptionist assured me that the room|be / ready / by two / at the latest|.", a:["would be ready by two at the latest"], u:'rep',
-   e:"<i>“It'll be ready by two”</i> → she assured me that it <b>would be</b> ready. <b>Will → would</b> w mowie zależnej."},
-  {s:"I love what I do. I|not / swap / my job / for yours / even if / you / pay / me / double|.", a:["wouldn't swap my job for yours even if you paid me double","wouldn't swap my job for yours, even if you paid me double"], u:'cond',
-   e:"Hipoteza z <i>even if</i> → <b>wouldn't</b>. W części z <i>if</i> czas przeszły: <b>paid</b>."},
-  {s:"On Saturday mornings, my dad|drag / us / out / of bed / at seven / and / make / us / wash / the car|.", a:["would drag us out of bed at seven and make us wash the car","used to drag us out of bed at seven and make us wash the car"], u:'past',
-   e:"Powtarzany sobotni rytuał z przeszłości → <b>would</b>. <b>Make + osoba + bezokolicznik bez to</b>: <i>make us wash</i>."},
-  {s:"“Oh no, I've left my wallet at home.” “Don't worry, I|get / this one / you / can / pay / next time|.”", a:["'ll get this one – you can pay next time","'ll get this one, you can pay next time","'ll get this one you can pay next time"], u:'fut',
-   e:"Spontaniczna oferta → <b>'ll get this one</b> (= ja stawiam). Druga część z <i>can</i> bez zmian."},
-  {s:"Thanks for the invitation. I|love / come / but / I / promise / help / my sister / move|.", a:["'d love to come, but I've promised to help my sister move","'d love to come but I've promised to help my sister move","'d love to come, but I promised to help my sister move"], u:'pol',
-   e:"<b>I'd love to…</b> = grzeczna forma chęci; dodaj <b>to</b>. Druga część: <b>I've promised to help</b> (present perfect, bo obietnica nadal obowiązuje)."},
-  {s:"The neighbours' dog|not / stop / bark / whenever / we / go / out / into / garden|.", a:["won't stop barking whenever we go out into the garden"], u:'ref',
-   e:"Powtarzająca się odmowa teraz → <b>won't stop</b> + <b>-ing</b>. Po <i>whenever</i> zwykły present i <b>the</b> garden."},
-  {s:"Teenagers|do / almost anything / to / avoid / be / see / with / their parents|.", a:["will do almost anything to avoid being seen with their parents"], u:'hab',
-   e:"Ogólna prawda o typowym zachowaniu → <b>will</b>. <i>Avoid</i> + <b>-ing</b>, a tu w stronie biernej: <b>being seen</b>."},
-  {s:"We offered him twice the asking price, but the old man|not / sell / the house / no matter / how much / we / offer|.", a:["wouldn't sell the house, no matter how much we offered","wouldn't sell the house no matter how much we offered"], u:'ref',
-   e:"Odmowa w przeszłości → <b>wouldn't</b>. Po <i>no matter how much</i> czas przeszły: <b>offered</b>."},
-  {s:"|it / be / easier / if / we / meet / halfway|?", a:["would it be easier if we met halfway"], u:'cond',
-   e:"Propozycja w formie hipotezy → <b>Would it be…</b> + <i>if</i> + past simple (<b>met</b>)."},
-  {s:"My sister|always / borrow / my clothes / and / give / them / back / with / stains / on them|!", a:["will always borrow my clothes and give them back with stains on them"], u:'annoy',
-   e:"Irytujący nawyk → akcentowane <b>WILL</b> + <i>always</i>. Jedno <i>will</i> obejmuje oba czasowniki."},
-  {s:"In twenty years' time, most cars|run / on electricity / and / petrol stations / disappear|.", a:["will run on electricity and petrol stations will have disappeared","will run on electricity and petrol stations will disappear"], u:'fut',
-   e:"Przewidywanie → <b>will run</b>. Drugą część najlepiej dać jako coś już zakończonego do tego momentu: <b>will have disappeared</b>."}
+  {"c":12,"s":"Dr Fahid said: “We've sent off his blood samples. We|have / results / in / day or two|.”","a":["'ll have the results in a day or two","will have the results in a day or two"],"u":"fut","e":"Przewidywanie oparte na planie → <b>'ll have</b>. Dodaj <b>the</b> results, <b>a</b> day or two."},
+  {"c":12,"s":"Dr Fahid explained that if the infection spread, Mervin|probably / lose / his arm|.","a":["would probably lose his arm"],"u":"cond","e":"Hipoteza (<i>if the infection spread</i>) → <b>would</b>. <i>Probably</i> stoi po <i>would</i>."},
+  {"c":12,"s":"The other departments|inform / about / Operation Wasp / on Monday|, so the operation could start the following week.","a":["would be informed about Operation Wasp on Monday"],"u":"rep","e":"Przyszłość w przeszłości w stronie biernej: <b>would be + III forma</b> (<i>informed</i>). Ktoś ich poinformuje, więc biernik."},
+  {"c":12,"s":"On Saturday Jane planned her evening: later she|go / to / supermarket / and / buy / everything / for / prawn curry|.","a":["would go to the supermarket and buy everything for a prawn curry","would go to the supermarket and buy everything for her prawn curry"],"u":"rep","e":"Plany w narracji przeszłej → <b>would go… and buy</b>, jedno <i>would</i> na dwa czasowniki. Dodaj <b>the</b> supermarket, <b>a</b> prawn curry."},
+  {"c":13,"s":"Jane to Pete on the phone: “I'll be ready in ten minutes. Send a car to my flat,|question tag|?”","a":["will you","would you"],"u":"pol","e":"Po trybie rozkazującym question tag to zwykle <b>will you?</b> (albo grzeczniej <i>would you?</i>). Łagodzi polecenie. Bardzo typowe w brytyjskim angielskim."},
+  {"c":13,"s":"The nurse said that the policewoman|not / wake up / at first / however / hard / she / shake / her|.","a":["wouldn't wake up at first, however hard she shook her","wouldn't wake up at first however hard she shook her"],"u":"ref","e":"Coś (tu organizm) „nie chce” zadziałać w przeszłości → <b>wouldn't</b>. Po <i>however hard</i> czas przeszły: <b>shook</b> (shake–shook–shaken)."},
+  {"c":13,"s":"WPC Morgan admitted that she|never / leave / her post / if / she / know / call / be / fake|.","a":["would never have left her post if she had known the call was fake","would never have left her post if she'd known the call was fake","would never have left her post if she had known that the call was fake"],"u":"cond","e":"Trzeci tryb warunkowy (żal o przeszłość): <b>would have + III</b> (<i>left</i>) + <i>if</i> + <b>had + III</b> (<i>known</i>). W podpowiedzi nie ma <i>have</i> ani <i>had</i>, musisz je dodać."},
+  {"c":14,"s":"“We'll do our best to sort it out, sir.” “I'm sure you|short answer|, Jane.”","a":["will"],"u":"fut","e":"Krótka odpowiedź: powtarzasz samo <b>will</b>, bez czasownika. Na końcu zdania nie skracasz: <i>I'm sure you will</i>, nigdy <i>you'll</i>."},
+  {"c":14,"s":"DC Reilly wasn't convinced: “|Jack / really / kill / his own brother|?”","a":["would Jack really kill his own brother"],"u":"cond","e":"Spekulacja o czymś hipotetycznym → <b>Would… really…?</b> = „czy naprawdę by…?”. <i>Really</i> po podmiocie."},
+  {"c":14,"s":"Jane wondered whether Jack was so desperate that he|arrange / murder / of / his own brother|.","a":["would arrange the murder of his own brother"],"u":"cond","e":"Hipoteza w pytaniu zależnym (<i>wondered whether… so desperate that</i>) → <b>would arrange</b>. Dodaj <b>the</b> murder."},
+  {"c":14,"s":"The pathologist explained that, as Mervin was already asleep, an injection|not / wake / him|.","a":["wouldn't have woken him","would not have woken him","wouldn't have woken him up"],"u":"cond","e":"Wniosek o przeszłości („nie obudziłby go”) → <b>wouldn't have + III</b>. III forma <i>wake</i>: <b>woken</b> (wake–woke–woken)."},
+  {"c":14,"s":"Jane realised that anyone who worked at Hunter Products|able / get hold of / drug / like / ketamine|.","a":["would be able to get hold of a drug like ketamine"],"u":"cond","e":"Wniosek hipotetyczny → <b>would be able to</b> (bo <i>would can</i> nie istnieje). Dodaj <b>a</b> drug."},
+  {"c":14,"s":"“Pete,|you / order / car / for me|? I need to go back to the farm.”","a":["would you order a car for me","will you order a car for me","would you order me a car"],"u":"pol","e":"Uprzejma prośba → <b>Would you…?</b> Dodaj <b>a</b> car."},
+  {"c":15,"s":"Jane didn't know what she was looking for in the farmhouse, but she was sure she|know / it / when / she / see / it|.","a":["would know it when she saw it"],"u":"rep","e":"<i>“I'll know it when I see it”</i> → she was sure she <b>would know</b>. Po <i>when</i> czas przeszły: <b>saw</b>."},
+  {"c":15,"s":"Jane asked Pete: “If you were a farmer with a lot of very sick sheep,|you / call in / vet|?”","a":["would you call in a vet","would you call a vet in"],"u":"cond","e":"Drugi tryb warunkowy w pytaniu → <b>would you call in</b>. Dodaj <b>a</b> vet."},
+  {"c":16,"s":"Jane couldn't imagine what kind of woman|have / affair / with / cold / married man / like / Jack Peck|.","a":["would have an affair with a cold married man like Jack Peck","would have an affair with a cold, married man like Jack Peck"],"u":"cond","e":"Spekulacja → <b>would have</b>. Uwaga, to <i>would</i> + <i>have</i> („miałaby romans”), nie <i>would have</i> + III. Dodaj <b>an</b> affair, <b>a</b> cold married man."},
+  {"c":16,"s":"Rose's big kitchen cooker was cold now, but when it was lit it|heat / whole house|.","a":["would heat the whole house","would have heated the whole house"],"u":"past","e":"Dwie dobre wersje. <b>Would heat</b> = tak było zwykle (nawyk w przeszłości). <b>Would have heated</b> = tak by było (hipoteza o przeszłości). Dodaj <b>the</b> whole house."},
+  {"c":16,"s":"If Rose had discovered that Hunter Products tested on animals, she|feel / terribly / torn|.","a":["would have felt terribly torn"],"u":"cond","e":"Trzeci tryb warunkowy: <i>if</i> + <b>had discovered</b> → <b>would have felt</b>. III forma <i>feel</i>: <b>felt</b>."},
+  {"c":15,"s":"After the call from the bank, Jane said: “We|better / pay / another / visit / to / Hunter Products|.”","a":["'d better pay another visit to Hunter Products","had better pay another visit to Hunter Products"],"u":"trap","e":"<b>Pułapka.</b> <i>'d better</i> = <b>had better</b> + bezokolicznik bez <i>to</i>. To rada albo plan na teraz, nie <i>would</i>."},
+  {"c":16,"s":"Mary Brady smiled at Jane: “I|show / you / round / house / if / you / like|.”","a":["'ll show you round the house, if you like","'ll show you round the house if you like","'ll show you around the house, if you like"],"u":"fut","e":"Spontaniczna propozycja → <b>'ll show</b>. <i>If you like</i> = jeśli chcesz (zwykły present). Dodaj <b>the</b> house."}
  ]
 ];
+const SET_META = [{"name":"Zestaw 1","key":"s0"},{"name":"Zestaw 2","key":"s1"},{"name":"Deadly Harvest 1","key":"d1"},{"name":"Deadly Harvest 2","key":"d2"},{"name":"Deadly Harvest 3","key":"d3"}];
 
 function norm(s) {
   return s.toLowerCase()
@@ -474,7 +381,7 @@ SETS.forEach((set, si) => {
   const tab = document.createElement('button');
   tab.className = 'tab'; tab.type = 'button'; tab.setAttribute('role', 'tab'); tab.id = 'tab-' + si;
   tab.setAttribute('aria-controls', 'panel-' + si);
-  tab.innerHTML = 'Zestaw ' + (si + 1) + '<span class="sc" id="tsc-' + si + '"></span>';
+  tab.innerHTML = SET_META[si].name + '<span class="sc" id="tsc-' + si + '"></span>';
   tab.addEventListener('click', () => select(si));
   tabsEl.appendChild(tab);
 
@@ -484,12 +391,12 @@ SETS.forEach((set, si) => {
   const ol = document.createElement('ol'); ol.className = 'items';
   set.forEach((q, qi) => {
     const [before, hint, after] = q.s.split('|');
-    const id = 's' + si + 'q' + qi;
+    const id = SET_META[si].key + 'q' + qi;
     const li = document.createElement('li');
     li.className = 'item'; li.dataset.id = id;
     li.innerHTML =
       '<span class="num">' + (qi + 1) + '.</span>' +
-      '<div class="body"><p class="sent">' + esc(before) + ' <input id="' + id + '" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Zdanie ' + (qi + 1) + ', luka"> <span class="hint">(' + esc(hint) + ')</span> ' + esc(after) + '</p>' +
+      '<div class="body"><p class="sent">' + (q.c ? '<span class="ch">rozdz. ' + q.c + '</span> ' : '') + esc(before) + ' <input id="' + id + '" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Zdanie ' + (qi + 1) + ', luka"> <span class="hint">(' + esc(hint) + ')</span> ' + esc(after) + '</p>' +
       '<div class="meta"></div><div class="tip" id="tip-' + id + '" role="note" hidden><p>' + q.e + '</p></div></div>' +
       '<div class="acts"><button class="mini" type="button" data-act="check">Sprawdź</button><button class="mini" type="button" data-act="show">Pokaż</button></div>';
     const input = li.querySelector('input');
@@ -596,16 +503,16 @@ function items(si) { return [...document.querySelectorAll('#panel-' + si + ' .it
 
 function updateScore() {
   SETS.forEach((set, si) => {
-    const ok = set.filter((_, qi) => states['s' + si + 'q' + qi] === 'ok').length;
-    const touched = set.filter((_, qi) => ['ok', 'bad', 'shown'].includes(states['s' + si + 'q' + qi])).length;
-    document.getElementById('tsc-' + si).textContent = touched ? ok + '/20' : '';
+    const ok = set.filter((_, qi) => states[SET_META[si].key + 'q' + qi] === 'ok').length;
+    const touched = set.filter((_, qi) => ['ok', 'bad', 'shown'].includes(states[SET_META[si].key + 'q' + qi])).length;
+    document.getElementById('tsc-' + si).textContent = touched ? ok + '/' + set.length : '';
   });
   const set = SETS[current];
-  const n = st => set.filter((_, qi) => states['s' + current + 'q' + qi] === st).length;
+  const n = st => set.filter((_, qi) => states[SET_META[current].key + 'q' + qi] === st).length;
   const ok = n('ok'), bad = n('bad'), shown = n('shown');
   document.getElementById('score').innerHTML = (ok + bad + shown)
-    ? 'Dobrze: <strong>' + ok + '</strong> / 20 · błędy: ' + bad + ' · pokazane: ' + shown
-    : 'Zestaw ' + (current + 1) + ' · 20 zdań';
+    ? 'Dobrze: <strong>' + ok + '</strong> / ' + set.length + ' · błędy: ' + bad + ' · pokazane: ' + shown
+    : SET_META[current].name + ' · ' + set.length + ' zdań';
 }
 
 function select(si) {
