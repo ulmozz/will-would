@@ -398,7 +398,7 @@ SETS.forEach((set, si) => {
       '<span class="num">' + (qi + 1) + '.</span>' +
       '<div class="body"><p class="sent">' + (q.c ? '<span class="ch">rozdz. ' + q.c + '</span> ' : '') + esc(before) + ' <input id="' + id + '" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Zdanie ' + (qi + 1) + ', luka"> <span class="hint">(' + esc(hint) + ')</span> ' + esc(after) + '</p>' +
       '<div class="meta"></div><div class="tip" id="tip-' + id + '" role="note" hidden><p>' + q.e + '</p></div></div>' +
-      '<div class="acts"><button class="mini" type="button" data-act="check">Sprawdź</button><button class="mini" type="button" data-act="show">Pokaż</button></div>';
+      '<div class="acts"><button class="mini" type="button" data-act="check">Sprawdź</button><button class="mini" type="button" data-act="show">Pokaż</button><button class="mini" type="button" data-act="clear" title="Wyczyść to zdanie">Wyczyść</button></div>';
     const input = li.querySelector('input');
     input.value = saved[id] || '';
     fit(input, q);
@@ -411,6 +411,12 @@ SETS.forEach((set, si) => {
     });
     li.querySelector('[data-act="check"]').addEventListener('click', () => check(li, q));
     li.querySelector('[data-act="show"]').addEventListener('click', () => show(li, q));
+    li.querySelector('[data-act="clear"]').addEventListener('click', () => {
+      input.value = ''; fit(input, q);
+      delete saved[id]; delete mine[id]; store.set('ww2-values', saved);
+      setState(li, q, '');
+      input.focus();
+    });
     ol.appendChild(li);
   });
   panel.appendChild(ol);
