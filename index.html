@@ -107,6 +107,11 @@ ol.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .tip::before { content: ""; position: absolute; top: -7px; left: 22px; width: 12px; height: 12px; background: var(--info-soft); border-left: 1px solid var(--info); border-top: 1px solid var(--info); transform: rotate(45deg); }
 .tip p { margin: 0; }
 .tip b { color: var(--info); }
+.diff { flex-basis: 100%; display: grid; grid-template-columns: max-content 1fr; gap: 2px 10px; font-size: .92rem; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+.diff .lbl { color: var(--muted); font-size: .8rem; padding-top: 2px; }
+.diff .w { min-width: 0; overflow-wrap: anywhere; }
+.diff .del { color: var(--bad); background: var(--bad-soft); text-decoration: line-through; border-radius: 3px; padding: 0 2px; }
+.diff .add { color: var(--ok); background: var(--ok-soft); font-weight: 700; border-radius: 3px; padding: 0 2px; }
 .acts { display: flex; gap: 6px; }
 .mini { font: 700 .8rem var(--f-body); border-radius: 7px; padding: 6px 10px; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--ink); white-space: nowrap; }
 .mini:hover { border-color: var(--accent); color: var(--accent); }
@@ -457,6 +462,7 @@ const store = {
 };
 const saved = store.get('ww2-values') || {};
 const states = {};
+const mine = {}; // błędne odpowiedzi zapamiętane przed „Pokaż”
 
 const tabsEl = document.getElementById('tabs');
 const panelsEl = document.getElementById('panels');
@@ -527,7 +533,10 @@ function setState(li, q, st) {
     meta.innerHTML = '<span class="fb bad">' + msg + '</span>';
   }
   else if (st === 'empty') meta.innerHTML = '<span class="fb bad">Wpisz odpowiedź</span>';
-  else if (st === 'shown') meta.innerHTML = '<span class="fb shown">Poprawnie: ' + esc(q.a[0]) + '</span>' + chip + info;
+  else if (st === 'shown') {
+    const m = mine[li.dataset.id];
+    meta.innerHTML = '<span class="fb shown">Poprawnie: ' + esc(q.a[0]) + '</span>' + chip + info + (m ? diffHtml(m, q) : '');
+  }
   else meta.innerHTML = '';
   const btn = meta.querySelector('.info');
   if (btn) btn.addEventListener('click', () => {
@@ -543,8 +552,40 @@ function check(li, q) {
   setState(li, q, q.a.some(a => norm(a) === v) ? 'ok' : 'bad');
 }
 
+// Porównanie słowo po słowie (na formach znormalizowanych): co było zbędne/błędne, czego brakowało
+function lcs(a, b) {
+  const t = Array.from({length: a.length + 1}, () => new Array(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i--)
+    for (let j = b.length - 1; j >= 0; j--)
+      t[i][j] = a[i] === b[j] ? t[i + 1][j + 1] + 1 : Math.max(t[i + 1][j], t[i][j + 1]);
+  const keepA = new Set(), keepB = new Set();
+  let i = 0, j = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) { keepA.add(i++); keepB.add(j++); }
+    else if (t[i + 1][j] >= t[i][j + 1]) i++; else j++;
+  }
+  return {len: t[0][0], keepA, keepB};
+}
+function diffHtml(mineRaw, q) {
+  const a = norm(mineRaw).split(' ');
+  let best = null;
+  q.a.forEach(ans => {
+    const b = norm(ans).split(' ');
+    const r = lcs(a, b);
+    if (!best || r.len > best.r.len) best = {b, r};
+  });
+  const {b, r} = best;
+  const mineH = a.map((w, i) => r.keepA.has(i) ? esc(w) : '<span class="del">' + esc(w) + '</span>').join(' ');
+  const goodH = b.map((w, j) => r.keepB.has(j) ? esc(w) : '<span class="add">' + esc(w) + '</span>').join(' ');
+  return '<div class="diff"><span class="lbl">Twoja</span><span class="w">' + mineH + '</span>' +
+         '<span class="lbl">Wzorzec</span><span class="w">' + goodH + '</span></div>';
+}
+
 function show(li, q) {
   const input = li.querySelector('input');
+  const prev = input.value.trim();
+  if (prev && !q.a.some(a => norm(a) === norm(prev))) mine[li.dataset.id] = prev;
+  else delete mine[li.dataset.id];
   input.value = q.a[0];
   fit(input, q);
   saved[li.dataset.id] = input.value; store.set('ww2-values', saved);
@@ -602,6 +643,7 @@ clearBtn.addEventListener('click', () => {
     const input = li.querySelector('input');
     input.value = ''; fit(input, SETS[current][qi]);
     delete saved[li.dataset.id];
+    delete mine[li.dataset.id];
     setState(li, SETS[current][qi], '');
   });
   store.set('ww2-values', saved);
